@@ -1,0 +1,83 @@
+body {
+  background: linear-gradient(to right, #fafeff, #f7fafa);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 320px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 26px;
+  margin-bottom: 15px;
+  text-align: right;
+  padding: 10px;
+  border: 2px solid #b2ebf2;
+  border-radius: 12px;
+  background: #f0f9ff;
+  box-shadow: inset 0 0 5px #b2ebf2;
+  color: #00796b;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #e0f2f1;
+  color: #004d40;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #b2dfdb;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #80cbc4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Special style for = and C buttons */
+button:nth-child(4n),
+button:nth-child(1) {
+  background-color: #ffecb3;
+  color: #e65100;
+}
+
+button:nth-child(4n):hover,
+button:nth-child(1):hover {
+  background-color: #ffe082;
+}
+
+button:nth-child(4n):active,
+button:nth-child(1):active {
+  background-color: #ffca28;
+}
+
+.zero {
+  grid-column: span 2;
+}
+.clicked {
+  box-shadow: 0 0 12px #64ffda;
+}
