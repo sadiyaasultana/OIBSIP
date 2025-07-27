@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cab Booking System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Book Your Cab</h2>
+    <form id="bookingForm">
+      <input type="text" placeholder="Full Name" name="name" required />
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="text" placeholder="Pickup Location" name="pickup" required />
+      <input type="text" placeholder="Drop Location" name="drop" required />
+      <input type="datetime-local" name="pickupTime" required />
+      <select name="cabType" required>
+        <option value="" disabled selected>Select Cab Type</option>
+        <option value="mini">Mini</option>
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+      </select>
+      <button type="submit">Book Now</button>
+    </form>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("bookingForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      message.innerHTML = <div class="success-message">Cab booked successfully! ✅</div>;
+      form.reset();
+    });
+  </script>
+</body>
+</html>
